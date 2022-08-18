@@ -1,6 +1,7 @@
 ﻿/* Задайте прямоугольный двумерный массив. 
 Напишите программу, которая будет находить строку с наименьшей суммой элементов.
 */
+
 int[,] GetArray(int m, int n)
 {
     int[,] result = new int[m, n];
@@ -35,18 +36,18 @@ void GetMinStringArray(int[,] array)
         int sumStr = array[i, 0];
         for (int j = 1; j < array.GetLength(1); j++)
         {
-            
+
             sumStr += array[i, j];
         }
 
-        if ( sumStr < result )
+        if (sumStr < result)
         {
             result = sumStr;
             numStr = i;
         }
     }
-Console.WriteLine($"Сумма наименьшей стоки = {result}");
-Console.WriteLine($"Строка № {numStr + 1}");
+    Console.WriteLine($"Сумма наименьшей стоки = {result}");
+    Console.WriteLine($"Строка № {numStr + 1}");
 }
 
 Console.WriteLine("Введите длинну столбцов массива,");
